@@ -1,16 +1,17 @@
 import Home from "./component/home";
 import Like from "./component/like";
+import Error from "./component/error";
 
-import { createBrowserRouter } from "react-router-dom";
+import { createHashRouter } from "react-router-dom";
 
 // Affectation des routes
 
-const router = createBrowserRouter([
+const router = createHashRouter([
+  { path: "/", element: <Home /> },
 
-    { path: "/", element: <Home /> },
+  { path: "/like", element: <Like /> },
 
-    { path: "/like", element: <Like /> },
-
+  { path: "/404", element: <Error /> },
 ]);
 
 export default router;
