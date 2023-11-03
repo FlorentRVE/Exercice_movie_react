@@ -6,7 +6,7 @@ import TriButton from "./tributton";
 
 const Home = () => {
   // ========= STATE ===========
-  const [searchTerms, setSearchTerms] = useState("");
+  const [searchTerms, setSearchTerms] = useState(localStorage.getItem("searchTerms") ?  JSON.parse(localStorage.getItem("searchTerms")) : " ");
   const [tri, setTri] = useState();
 
   return (
