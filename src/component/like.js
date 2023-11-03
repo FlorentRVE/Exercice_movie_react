@@ -4,10 +4,10 @@ import * as api from "../utils/api";
 import Header from "./header";
 
 const Like = () => {
-  // const [data, setData] = useState([]); // Création du state data qui va accueillir nos données.
-  const [genre, setGenre] = useState([]); // Création du state data qui va accueillir nos données.
+  const [genre, setGenre] = useState([]); // Création de state qui va accueillir nos données.
   const [isLiked, setIsLiked] = useState([]);
   
+  // ========= FONCTION POUR SUPPRIMER DES LIKES =========
   const handleClick = (item) => {
     let like = localStorage.getItem("like");
     let currentLike = like ? JSON.parse(like) : [];
@@ -32,7 +32,7 @@ const Like = () => {
     });
   }, []);
 
-  // ===== Récupération des données avec getData() =========
+  // ===== Récupération des données du local storage =========
   let data = JSON.parse(localStorage.getItem("like"));
   console.log(data);
 

@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 import * as api from "../utils/api";
 
 const MovieDisplay = ({ searchTerms, tri }) => {
-  const [data, setData] = useState([]); // Création du state data qui va accueillir nos données.
-  const [genre, setGenre] = useState([]); // Création du state data qui va accueillir nos données.
+  const [data, setData] = useState([]); // Création de state qui va accueillir nos données.
+  const [genre, setGenre] = useState([]); 
   const [isLiked, setIsLiked] = useState([]);
 
   localStorage.setItem('searchTerms', JSON.stringify(searchTerms));
